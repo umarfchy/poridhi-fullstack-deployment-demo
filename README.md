@@ -1,5 +1,9 @@
 # poridhi-fullstack-deployment-demo
 
+Architecture
+
+<img src="./diagram.svg" alt=""/>
+
 Topics
 
 - nslookup, dnsutils [src](https://www.tecmint.com/install-dig-and-nslookup-in-linux/)

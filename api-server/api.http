@@ -1,0 +1,12 @@
+### test connection
+GET http://localhost:3000/
+
+
+### create a new user
+POST http://localhost:3000/create
+Content-Type: application/json
+
+{
+  "data": "new msg data"
+}
+

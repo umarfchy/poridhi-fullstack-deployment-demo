@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  redis:
+    container_name: "redis-pubsub"
+    image: "redis:latest"
+    restart: always
+    command: redis-server --save 20 1 --loglevel warning --requirepass mypassword
+    ports:
+      - '6379:6379'
+    networks:
+      - mynetwork
+
+  db:
+    container_name: "db"
+    image: mysql:8.0
+    restart: always
+    environment:
+      - MYSQL_DATABASE=mydb
+      - MYSQL_ROOT_PASSWORD=password
+    ports:
+      - '3306:3306'
+    networks:
+      - mynetwork
+
+networks:
+  mynetwork:
+    driver: bridge
